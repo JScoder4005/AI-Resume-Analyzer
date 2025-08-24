@@ -15,12 +15,15 @@ const FileUploader = ({ onFileSelect }: FileUploaderProps) => {
     [onFileSelect]
   );
 
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({
-    onDrop,
-    multiple: false,
-    accept: { "application/pdf": [".pdf"] },
-    maxSize: 20 * 1024 * 1024, // 20 MB
-  });
+  const { getRootProps, getInputProps, isDragActive, acceptedFiles } =
+    useDropzone({
+      onDrop,
+      multiple: false,
+      accept: { "application/pdf": [".pdf"] },
+      maxSize: 20 * 1024 * 1024, // 20 MB
+    });
+
+  //   const file = acceptedFiles[0] || null;
 
   return (
     <div className="w-full gradient-border">
