@@ -89,6 +89,7 @@ const Upload = () => {
     const formData = new FormData(form);
 
     const companyName = formData.get("company-name") as string;
+    console.log(formData.get("company-name"));
     const jobTitle = formData.get("job-title") as string;
     const jobDescription = formData.get("job-description") as string;
 
