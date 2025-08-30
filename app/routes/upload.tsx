@@ -341,6 +341,7 @@ const Upload = () => {
     const jobDescription = formData.get("job-description") as string;
 
     console.log("Form data:", { companyName, jobTitle, jobDescription, file });
+    console.log("File object:", file);
 
     // Validation
     if (!companyName?.trim()) {
